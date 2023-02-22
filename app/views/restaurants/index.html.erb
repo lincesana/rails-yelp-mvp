@@ -1,0 +1,12 @@
+<div>
+<h1> Here's our list of restaurants</h1>
+<h3>Click for more info</h3>
+
+<ul>
+  <% @restaurants.each do |r| %>
+    <%= link_to restaurant_path(r) do %>
+      <li><%= r.name %> : this restaurant offers <%= r.category %> food and is located in <%= r.address %> </li>
+    <% end %>
+  <% end %>
+</ul>
+</div>
